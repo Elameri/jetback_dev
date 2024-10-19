@@ -2,7 +2,8 @@ from setuptools import setup, find_packages
 import os
 
 def read_requirements(file):
-    return [line.strip() for line in open(file) if line.strip() and not line.startswith('#')]
+    with open(file) as f:
+        return [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
 setup(
     name="jetback_dev",
