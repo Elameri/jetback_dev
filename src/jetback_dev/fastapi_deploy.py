@@ -86,7 +86,7 @@ def jetback_deploy_fastapi(app):
     try:
         from fastapi import FastAPI
     except ImportError:
-        raise ImportError("FastAPI is not installed. Install it with 'pip install jetback_dev[fastapi]'")
+        raise ImportError("FastAPI is not installed. Install it with 'pip install jetback[fastapi]'")
 
     if not isinstance(app, FastAPI):
         raise TypeError("The 'app' argument must be a FastAPI application.")

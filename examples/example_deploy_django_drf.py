@@ -2,7 +2,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from django.conf import settings
 from django.urls import path
-from jetback_dev import jetback_deploy_django
+from jetback import jetback_deploy_django
 
 # Configure Django settings
 if not settings.configured:

@@ -62,7 +62,7 @@ def jetback_deploy_django(app):
         import django
         from django.core.handlers.wsgi import WSGIHandler
     except ImportError:
-        raise ImportError("Django is not installed. Install it with 'pip install jetback_dev[django]'")
+        raise ImportError("Django is not installed. Install it with 'pip install jetback[django]'")
     
     if not isinstance(app, get_wsgi_application):
         raise TypeError("The 'app' argument must be a Django WSGI application (WSGIHandler instance).")

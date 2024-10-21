@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from jetback_dev import jetback_deploy_fastapi
+from jetback import jetback_deploy_fastapi
 
 # Create your FastAPI app
 app = FastAPI()

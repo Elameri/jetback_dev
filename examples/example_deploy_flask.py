@@ -1,6 +1,6 @@
 import flask
 from flask_cors import CORS
-from jetback_dev import jetback_deploy_flask
+from jetback import jetback_deploy_flask
 
 # Initialize Flask
 app = flask.Flask(__name__)

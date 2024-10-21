@@ -19,7 +19,7 @@ def jetback_deploy_flask(app):
     try:
         import flask
     except ImportError:
-        raise ImportError("Flask is not installed. Install it with 'pip install jetback_dev[flask]'")
+        raise ImportError("Flask is not installed. Install it with 'pip install jetback[flask]'")
 
     if not isinstance(app, flask.Flask):
         raise TypeError("The 'app' argument must be a Flask application.")

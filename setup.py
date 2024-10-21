@@ -6,7 +6,7 @@ def read_requirements(file):
         return [line.strip() for line in f if line.strip() and not line.startswith('#')]
 
 setup(
-    name="jetback_dev",
+    name="jetback",
     version="0.1.0",
     package_dir={"": "src"},
     packages=find_packages(where="src"),

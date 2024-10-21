@@ -1,6 +1,6 @@
-# jetback_dev
+# jetback
 
 ## Installation
-* `pip install jetback_dev`
-* `pip install jetback_dev[flask]`
-* `pip install jetback_dev[flask,django]`
+* `pip install jetback`
+* `pip install jetback[flask]`
+* `pip install jetback[flask,django]`
