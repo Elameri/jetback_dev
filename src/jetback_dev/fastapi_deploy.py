@@ -77,7 +77,7 @@ def jetback_deploy_fastapi(app):
         app (fastapi.FastAPI): The FastAPI application to deploy.
 
     Returns:
-        function: The entry point function for the Cloud Function.
+        function: The entry point function for the backend.
 
     Raises:
         ImportError: If FastAPI is not installed.
@@ -94,7 +94,7 @@ def jetback_deploy_fastapi(app):
     adapter = FastAPIAdapter(app)
 
     @functions_framework_http
-    def backend_entry_point(request: Any) -> Callable:
+    def jetback_entrypoint(request: Any) -> Callable:
         return adapter(request)
 
-    return backend_entry_point
+    return jetback_entrypoint

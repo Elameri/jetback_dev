@@ -9,7 +9,7 @@ def jetback_deploy_flask(app):
         app (flask.Flask): The Flask application to deploy.
 
     Returns:
-        function: The entry point function for the Cloud Function.
+        function: The entry point function for the backend.
 
     Raises:
         ImportError: If Flask is not installed.
@@ -25,8 +25,8 @@ def jetback_deploy_flask(app):
         raise TypeError("The 'app' argument must be a Flask application.")
     
     @functions_framework_http
-    def backend_entry_point(request):
+    def jetback_entrypoint(request):
         with app.request_context(request.environ):
             return app.full_dispatch_request()
     
-    return backend_entry_point
+    return jetback_entrypoint

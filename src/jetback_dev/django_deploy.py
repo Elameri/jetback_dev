@@ -52,7 +52,7 @@ def jetback_deploy_django(app):
         app: The Django WSGI application to deploy.
 
     Returns:
-        function: The entry point function for the Cloud Function.
+        function: The entry point function for the backend.
 
     Raises:
         ImportError: If Django is not installed.
@@ -70,7 +70,7 @@ def jetback_deploy_django(app):
     adapter = WSGIAdapter(app)
 
     @functions_framework_http
-    def backend_entry_point(request):
+    def jetback_entrypoint(request):
         return adapter(request)
 
-    return backend_entry_point
+    return jetback_entrypoint
